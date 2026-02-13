@@ -680,6 +680,16 @@ html {
     color: #999;
 }
 
+.member-name a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.member-name a:hover {
+    color: #e60023;
+}
+
 /* Organizational Chart Section */
 .org-chart-section {
     max-width: 1000px;
