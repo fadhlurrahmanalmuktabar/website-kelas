@@ -860,3 +860,71 @@ html {
         font-size: 18px;
     }
 }
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-content {
+        flex: 1;
+    }
+
+    .hero-image {
+        flex: 1;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns for tablet */
+        gap: 24px;
+        padding: 0 30px 60px;
+    }
+
+    .member-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns for members on tablet */
+        gap: 20px;
+    }
+
+    .org-level {
+        gap: 40px;
+    }
+
+    .org-card {
+        width: 180px;
+        /* Slightly smaller org cards */
+    }
+}
+
+/* Mobile Adjustments (Refinement) */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for large mobile */
+    }
+
+    .member-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for members on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        /* 1 column for small mobile */
+    }
+
+    .member-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Keep 2 cols for members but smaller if needed, or 1 */
+        gap: 15px;
+    }
+
+    .member-image {
+        aspect-ratio: 1 / 1;
+        /* Square photos on very small screens to save space */
+    }
+}
