@@ -44,7 +44,7 @@
                 <li><a href="#">Explore</a></li>
                 <li><a href="#about-us">About Us!!</a></li>
                 <li><a href="#member">Member</a></li>
-                <li><a href="#">Contact Us!!</a></li>
+                <li><a href="contact.html">Contact Us!!</a></li>
             </ul>
         </nav>
         <div style="display: flex; align-items: center; gap: 20px;">
@@ -61,7 +61,7 @@
 
     <div class="hero-container">
         <div class="hero-content hero">
-            <h1 style="text-align: left;">THE BEST CLASS IN MAN INSAN CENDEKIA KOTA PALU</h1>
+            <h1 style="text-align: left;"><span id="typewriter" class="typewriter-text"></span></h1>
             <p style="text-align: left;">kelas terbaik terkece tergokil terkeren di MAN Insan Cendekia Kota Palu
                 angkatan 9 AVYANAZER</p>
 
@@ -130,7 +130,8 @@
 
     <div class="gallery">
         <!-- Card 1 -->
-        <div class="card" data-aos="fade-up" data-aos-delay="0">
+        <div class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2"
+            data-aos="fade-up" data-aos-delay="0">
             <div class="image-box">
                 <!-- Gambar placeholder merah/hitam -->
                 <img src="1.jpg" alt="Bukber Al Furqan di Wizzmie" loading="lazy">
@@ -151,7 +152,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="card">
+        <div class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <div class="image-box">
                 <img src="3.jpg" alt="Lelaki Al Furqan MAN IC Palu" loading="lazy">
                 <div class="overlay">
@@ -171,7 +172,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="card">
+        <div class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <div class="image-box">
                 <img src="2.jpg" alt="Kegiatan Vatulemo Al Furqan" loading="lazy">
                 <div class="overlay">
@@ -191,7 +192,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="card">
+        <div class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <div class="image-box">
                 <img src="4.jpeg" alt="Juara Umum ALASKA MAN IC Palu" loading="lazy">
                 <div class="overlay">
@@ -211,7 +212,7 @@
         </div>
 
         <!-- Card 5 -->
-        <div class="card">
+        <div class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <div class="image-box">
                 <img src="5.jpeg" alt="Siswa Al Furqan setelah ALASKA" loading="lazy">
                 <div class="overlay">
@@ -231,7 +232,7 @@
         </div>
 
         <!-- Card 6 -->
-        <div class="card">
+        <div class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <div class="image-box">
                 <img src="6.jpeg" alt="Istirahat setelah juara umum ALASKA" loading="lazy">
                 <div class="overlay">
@@ -251,7 +252,7 @@
         </div>
 
         <!-- Card 7 -->
-        <div class="card">
+        <div class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <div class="image-box">
                 <img src="7.jpeg" alt="Perayaan setelah classmeet Al Furqan" loading="lazy">
                 <div class="overlay">
@@ -271,7 +272,7 @@
         </div>
 
         <!-- Card 8 -->
-        <div class="card">
+        <div class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <div class="image-box">
                 <img src="8.jpeg" alt="Kegiatan kelas Al Furqan" loading="lazy">
                 <div class="overlay">
@@ -291,7 +292,7 @@
         </div>
 
         <!-- Card 9 -->
-        <div class="card">
+        <div class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <div class="image-box">
                 <img src="9.jpg" alt="Peringatan Hari Pahlawan Al Furqan" loading="lazy">
                 <div class="overlay">
@@ -311,7 +312,7 @@
         </div>
 
         <!-- Card 10 -->
-        <div class="card">
+        <div class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <div class="image-box">
                 <img src="10.jpg" alt="17 Agustus bersama Al Furqan" loading="lazy">
                 <div class="overlay">
@@ -448,7 +449,7 @@
                 <div class="member-info">
                     <div class="member-name">
                         <a href="https://www.instagram.com/mhrzkrmadhn/" target="_blank" rel="noopener noreferrer">Muh.
-                            Rezky Ramadhan</a>
+                            Rizky Ramadhan</a>
                     </div>
                     <div class="member-role">Student</div>
                 </div>
@@ -1030,6 +1031,31 @@
             once: true,
             offset: 100
         });
+    </script>
+
+    <!-- Vanilla Tilt for 3D Effect -->
+    <script src="vanilla-tilt.min.js"></script>
+
+    <!-- Custom Cursor & Typewriter Logic -->
+    <script>
+        // Typewriter Effect
+        const text = "THE BEST CLASS IN MAN INSAN CENDEKIA KOTA PALU";
+        const typewriterElement = document.getElementById('typewriter');
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                typewriterElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 50); // Typing speed
+            } else {
+                // Remove cursor blink effect after typing is done (optional)
+                typewriterElement.style.borderRight = "none";
+            }
+        }
+
+        // Start typing when page loads
+        window.addEventListener('load', typeWriter);
     </script>
 
 </body>

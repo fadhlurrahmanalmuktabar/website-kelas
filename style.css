@@ -5,6 +5,29 @@
     font-family: 'Inter', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Typewriter Cursor */
+.typewriter-text {
+    border-right: 3px solid #e60023;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #e60023;
+    }
+}
+
 body {
     background-color: #0a0a0a;
     color: #f3f3f3;
@@ -937,4 +960,87 @@ html {
         aspect-ratio: 1 / 1;
         /* Square photos on very small screens to save space */
     }
+}
+
+/* Contact Page Styles */
+.contact-page-container {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-box {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.contact-box h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-box p {
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-link-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 18px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.contact-link-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-link-item i {
+    font-size: 24px;
+    color: #e60023;
+}
+
+.contact-link-item a,
+.contact-link-item span {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-home-btn {
+    display: inline-block;
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+.back-home-btn:hover {
+    color: #e60023;
+    border-color: #e60023;
 }
