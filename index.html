@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Furqan Class</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- Font awesome for search icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="logo.png" alt="Logo Al Furqan MAN Insan Cendekia Palu" style="height: 50px;">
+            <a href="#" class="logo">AL FURQAN</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#about-us">About Us!!</a></li>
+                <li><a href="#member">Member</a></li>
+                <li><a href="#">Contact Us!!</a></li>
+            </ul>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <a href="#" class="login-btn">Log in</a>
+            <a href="#" class="cta-button">Sign up</a>
+            <!-- Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-container">
+        <div class="hero-content hero">
+            <h1 style="text-align: left;">THE BEST CLASS IN MAN INSAN CENDEKIA KOTA PALU</h1>
+            <p style="text-align: left;">kelas terbaik terkece tergokil terkeren di MAN Insan Cendekia Kota Palu
+                angkatan 9 AVYANAZER</p>
+
+            <div class="pills">
+                <a href="#" class="pill active">Shots</a>
+                <a href="#" class="pill">Designers</a>
+                <a href="#" class="pill">Services</a>
+            </div>
+
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="What attracted you to us?">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="tags" style="text-align: left;">
+                <span>Popular:</span>
+                <a href="#" class="tag-link">dashboard</a>
+                <a href="#" class="tag-link">landing page</a>
+                <a href="#" class="tag-link">e-commerce</a>
+                <a href="#" class="tag-link">logo</a>
+                <a href="#" class="tag-link">card</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img id="hero-slideshow" src="gambar1.jpeg"
+                alt="Foto siswa-siswi kelas Al Furqan MAN Insan Cendekia Kota Palu"
+                style="transition: opacity 0.5s ease-in-out;" fetchpriority="high">
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            "gambar3.jpeg",
+            "gambar2.jpeg",
+            "gambar1.jpeg",
+            "gambar4.jpeg",
+            "gambar5.jpeg",
+            "gambar6.jpeg",
+            "gambar7.jpeg",
+            "gambar8.jpeg"
+        ];
+
+        let currentIndex = 0;
+        const imgElement = document.getElementById('hero-slideshow');
+
+        setInterval(() => {
+            // Fade out
+            imgElement.style.opacity = 0;
+
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                imgElement.src = images[currentIndex];
+                // Fade in
+                imgElement.style.opacity = 1;
+            }, 500); // Wait for fade out to complete
+
+        }, 5000); // Change every 5 seconds
+    </script>
+
+    <div class="start-project-banner" data-aos="fade-up">
+        <span><b>Our memory with Al Furqan 2024-2026</b></span>
+    </div>
+
+    <div class="gallery">
+        <!-- Card 1 -->
+        <div class="card" data-aos="fade-up" data-aos-delay="0">
+            <div class="image-box">
+                <!-- Gambar placeholder merah/hitam -->
+                <img src="1.jpg" alt="Bukber Al Furqan di Wizzmie" loading="lazy">
+                <div class="overlay">
+                    <span style="color:white; font-weight:600;">Lihat Detail</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <span>Bukber di Wizzmie</span>
+                <div class="stats">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    999
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="3.jpg" alt="Lelaki Al Furqan MAN IC Palu" loading="lazy">
+                <div class="overlay">
+                    <span style="color:white; font-weight:600;">Lihat Detail</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <span>Lelaki Al Furqan</span>
+                <div class="stats">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    999
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="2.jpg" alt="Kegiatan Vatulemo Al Furqan" loading="lazy">
+                <div class="overlay">
+                    <span style="color:white; font-weight:600;">Lihat Detail</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <span>Vatulemo</span>
+                <div class="stats">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    999
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="4.jpeg" alt="Juara Umum ALASKA MAN IC Palu" loading="lazy">
+                <div class="overlay">
+                    <span style="color:white; font-weight:600;">Lihat Detail</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <span>Juara Umum ALASKA</span>
+                <div class="stats">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    999
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="5.jpeg" alt="Siswa Al Furqan setelah ALASKA" loading="lazy">
+                <div class="overlay">
+                    <span style="color:white; font-weight:600;">Lihat Detail</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <span>Lelah setelah ALASKA</span>
+                <div class="stats">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    999
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="6.jpeg" alt="Istirahat setelah juara umum ALASKA" loading="lazy">
+                <div class="overlay">
+                    <span style="color:white; font-weight:600;">Lihat Detail</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <span>Tidur setelah juara umum</span>
+                <div class="stats">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    999
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="7.jpeg" alt="Perayaan setelah classmeet Al Furqan" loading="lazy">
+                <div class="overlay">
+                    <span style="color:white; font-weight:600;">Lihat Detail</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <span>celebrate after classmeet</span>
+                <div class="stats">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    999
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="8.jpeg" alt="Kegiatan kelas Al Furqan" loading="lazy">
+                <div class="overlay">
+                    <span style="color:white; font-weight:600;">Lihat Detail</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <span>GACOR!!</span>
+                <div class="stats">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    999
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="9.jpg" alt="Peringatan Hari Pahlawan Al Furqan" loading="lazy">
+                <div class="overlay">
+                    <span style="color:white; font-weight:600;">Lihat Detail</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <span>Hari pahlawan</span>
+                <div class="stats">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    999
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="10.jpg" alt="17 Agustus bersama Al Furqan" loading="lazy">
+                <div class="overlay">
+                    <span style="color:white; font-weight:600;">Lihat Detail</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <span>17 agustus with alfurqan</span>
+                <div class="stats">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    999
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Statistics Banner Section -->
+    <section id="about-us" class="stats-banner-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">23</div>
+                <div class="stat-label">Total Siswa</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Siswa Laki-laki</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Siswi Perempuan</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Member Section -->
+    <section id="member" class="member-section">
+        <h2>Our Members</h2>
+        <div class="member-grid">
+            <!-- Member 1 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Abdullah_Alghifari.png" alt="Abdullah Alghifari, siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Abdullah Alghifari</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Bambang_Arya_S.Adam.png" alt="Bambang Arya S.Adam, siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Bambang Arya S.Adam</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Fadhlurrahman_Al_Muktabar.jpg" alt="Fadhlurrahman Al Muktabar, Ketua Kelas Al Furqan"
+                        loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Fadhlurrahman Al Muktabar</div>
+                    <div class="member-role">Ketua Kelas</div>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Fuad_Bin_Abdul_Aziz.png" alt="Fuad Bin Abdul Aziz, siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Fuad Bin Abdul Aziz</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 5 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Muh_Albani_Mubarak.jpeg" alt="Muh Albani Mubarak, siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Muh Albani Mubarak</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 6 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Muh_Alfiqri_Barack_Obama.png" alt="Muh Alfiqri Barack Obama, siswa Al Furqan"
+                        loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Muh Alfiqri Barack Obama</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 7 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="member7.jpg" alt="Siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Student</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 8 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Muh_Ghazwan_Ats-tsaqib.jpeg" alt="Muh Ghazwan Ats-tsaqib, siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Muh Ghazwan Ats-tsaqib</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 9 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Moh_taufik.png" alt="Moh Taufik, siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Moh Taufik</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 10 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Rezki_Mahindra_Manangkari.jpeg" alt="Rezki Mahindra Manangkari, siswa Al Furqan"
+                        loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Rezki Mahindra Manangkari</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 11 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="member11.jpg" alt="Siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Member 11</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 12 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Viegath_Syachdriq_Esa.png" alt="Viegath Syachdriq Esa, siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Viegath Syachdriq Esa</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 13 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Alyza_Layla_Nurrahma.jpeg" alt="Alyza Layla Nurrahma, siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Alyza Layla Nurrahma</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 14 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="member14.jpg" alt="Siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Member 14</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 15 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="member15.jpg" alt="Siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Member 15</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 16 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Izza_Nur_Afifa.png" alt="Izza Nur Afifa, siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Izza Nur Afifa</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 17 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Dwi_Anggun_Khairunnisa.png" alt="Dwi Anggun Khairunnisa, siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Dwi Anggun Khairunnisa</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 18 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Khayla_Huriyah_Syahla.jpg" alt="Khayla Huriyah Syahla, siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Khayla Huriyah Syahla</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 19 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="member19.jpg" alt="Siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Member 19</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 20 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Nur_Farah_Diba_Katili.png" alt="Nur Farah Diba Katili, Bendahara Al Furqan"
+                        loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Nur Farah Diba Katili</div>
+                    <div class="member-role">Bendahara</div>
+                </div>
+            </div>
+
+            <!-- Member 21 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="member21.jpg" alt="Siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Member 21</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 22 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="member22.jpg" alt="Siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Member 22</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+
+            <!-- Member 23 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="member23.jpg" alt="Siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Member 23</div>
+                    <div class="member-role">Student</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Previous Members Subsection -->
+        <h3 style="font-size: 36px; color: #fff; margin-top: 80px; margin-bottom: 40px; text-align: center;">Previous
+            Members</h3>
+        <div class="member-grid">
+            <!-- Previous Member 1 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Zaid_Ahmad.jpg" alt="Zaid Ahmad, mantan siswa Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Zaid Ahmad</div>
+                    <div class="member-role">previous Student</div>
+                </div>
+            </div>
+
+            <!-- Previous Member 2 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Sabrina.jpg" alt="Sabrina, mantan Bendahara Al Furqan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Sabrina</div>
+                    <div class="member-role">Previous Bendahara</div>
+                </div>
+            </div>
+
+            <!-- Previous Member 3 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Ibrahim_Al_hanif_Kadekoh.jpg" alt="Ibrahim Al hanif Kadekoh, mantan siswa Al Furqan"
+                        loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Ibrahim Al hanif Kadekoh</div>
+                    <div class="member-role">previous Student</div>
+                </div>
+            </div>
+
+            <!-- Previous Member 4 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Adelia_Syifa_Lapuna.jpeg" alt="Adelia Syifa Lapuna, mantan Wakil Ketua Kelas Al Furqan"
+                        loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Adelia Syifa Lapuna</div>
+                    <div class="member-role">previous Wakil Ketua Kelasz </div>
+                </div>
+            </div>
+
+            <!-- Previous Member 5 -->
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="Fitratunnisa_Mapiase.jpg" alt="Fitratunnisa Mapiase, mantan siswa Al Furqan"
+                        loading="lazy">
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Fitratunnisa Mapiase</div>
+                    <div class="member-role">previous Student</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizational Chart Section -->
+    <section class="org-chart-section" data-aos="fade-up">
+        <h2>Struktur Kelas</h2>
+        <div class="org-chart">
+            <!-- Level 1: Wali Kelas -->
+            <div class="org-level">
+                <div class="org-card">
+                    <div class="org-card-image">
+                        <img src="Ismail_Rahim.jpeg" alt="Ust. Ismail Rahim S.Mat, Wali Kelas Al Furqan" loading="lazy">
+                    </div>
+                    <div class="org-card-info">
+                        <div class="org-card-name">Ismail Rahim S.Mat</div>
+                        <div class="org-card-position">Wali Kelas</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connector -->
+            <div class="org-line-vertical"></div>
+
+            <!-- Level 2: Ketua Kelas -->
+            <div class="org-level">
+                <div class="org-card">
+                    <div class="org-card-image">
+                        <img src="Fadhlurrahman_Al_Muktabar.jpg" alt="Fadhlurrahman Al Muktabar, Ketua Kelas Al Furqan"
+                            loading="lazy">
+                    </div>
+                    <div class="org-card-info">
+                        <div class="org-card-name">Fadhlurrahman Al Muktabar</div>
+                        <div class="org-card-position">Ketua Kelas</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connector -->
+            <div class="org-level branched">
+                <div class="branch-lines"></div>
+            </div>
+
+            <!-- Level 3: Branches -->
+            <div class="org-level">
+                <!-- Branch Left -->
+                <div class="org-card">
+                    <div class="org-card-image">
+                        <img src="Nur_Farah_Diba_Katili.png" alt="Nur Farah Diba Katili, Bendahara Al Furqan"
+                            loading="lazy">
+                    </div>
+                    <div class="org-card-info">
+                        <div class="org-card-name">Nur Farah Diba Katili</div>
+                        <div class="org-card-position">Bendahara</div>
+                    </div>
+                </div>
+
+                <!-- Branch Right -->
+                <div class="org-card">
+                    <div class="org-card-image">
+                        <img src="sekretaris.jpg" alt="Indy, Sekretaris Al Furqan" loading="lazy">
+                    </div>
+                    <div class="org-card-info">
+                        <div class="org-card-name">Indy</div>
+                        <div class="org-card-position">Sekretaris</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Function to open modal
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+        }
+
+        // Function to close modal
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById('imageModal').addEventListener('click', function (event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Add click event to all gallery card images, member images, and org chart images
+        document.querySelectorAll('.image-box img, .member-image img, .org-card-image img').forEach(img => {
+            img.addEventListener('click', function () {
+                openModal(this.src);
+            });
+        });
+
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', function () {
+            this.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function () {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // Automatically add AOS attributes to elements
+        // Add to all gallery cards with stagger effect
+        document.querySelectorAll('.gallery .card').forEach((card, index) => {
+            if (!card.hasAttribute('data-aos')) {
+                card.setAttribute('data-aos', 'fade-up');
+                card.setAttribute('data-aos-delay', (index % 4) * 100);
+            }
+        });
+
+        // Add to About Us section
+        const aboutSection = document.querySelector('.about-section');
+        if (aboutSection) {
+            aboutSection.setAttribute('data-aos', 'fade-up');
+            aboutSection.setAttribute('data-aos-duration', '1000');
+        }
+
+        // Add to all member cards with stagger effect
+        document.querySelectorAll('.member-card').forEach((card, index) => {
+            card.setAttribute('data-aos', 'zoom-in');
+            card.setAttribute('data-aos-delay', (index % 6) * 50);
+        });
+
+        // Add to all org chart cards with stagger effect
+        document.querySelectorAll('.org-card').forEach((card, index) => {
+            card.setAttribute('data-aos', 'flip-left');
+            card.setAttribute('data-aos-delay', index * 200);
+        });
+
+        // Add to Member section heading
+        const memberSection = document.querySelector('.member-section');
+        if (memberSection) {
+            const heading = memberSection.querySelector('h2');
+            if (heading) {
+                heading.setAttribute('data-aos', 'fade-down');
+            }
+        }
+    </script>
+
+    <!-- Particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Particles.js Configuration -->
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#e60023'
+                },
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000000'
+                    }
+                },
+                opacity: {
+                    value: 0.3,
+                    random: false,
+                    anim: {
+                        enable: true,
+                        speed: 0.5,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#ffffff',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 0.5
+                        }
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+
+    <!-- AOS - Animate On Scroll Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+
+</body>
+
+</html>
