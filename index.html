@@ -48,8 +48,6 @@
             </ul>
         </nav>
         <div style="display: flex; align-items: center; gap: 20px;">
-            <a href="#" class="login-btn">Log in</a>
-            <a href="#" class="cta-button">Sign up</a>
             <!-- Hamburger Menu -->
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -444,7 +442,7 @@
             <!-- Member 7 -->
             <div class="member-card">
                 <div class="member-image">
-                    <img src="member7.jpg" alt="Siswa Al Furqan" loading="lazy">
+                    <img src="pria_misterius.jpeg" alt="Siswa Al Furqan" loading="lazy">
                 </div>
                 <div class="member-info">
                     <div class="member-name">
@@ -501,7 +499,7 @@
             <!-- Member 11 -->
             <div class="member-card">
                 <div class="member-image">
-                    <img src="member11.jpg" alt="Siswa Al Furqan" loading="lazy">
+                    <img src="pria_misterius.jpeg" alt="Siswa Al Furqan" loading="lazy">
                 </div>
                 <div class="member-info">
                     <div class="member-name">
@@ -543,7 +541,7 @@
             <!-- Member 14 -->
             <div class="member-card">
                 <div class="member-image">
-                    <img src="member14.jpg" alt="Siswa Al Furqan" loading="lazy">
+                    <img src="pria_misterius.jpeg" alt="Siswa Al Furqan" loading="lazy">
                 </div>
                 <div class="member-info">
                     <div class="member-name">
@@ -557,7 +555,7 @@
             <!-- Member 15 -->
             <div class="member-card">
                 <div class="member-image">
-                    <img src="member15.jpg" alt="Siswa Al Furqan" loading="lazy">
+                    <img src="pria_misterius.jpeg" alt="Siswa Al Furqan" loading="lazy">
                 </div>
                 <div class="member-info">
                     <div class="member-name">
@@ -613,7 +611,7 @@
             <!-- Member 19 -->
             <div class="member-card">
                 <div class="member-image">
-                    <img src="member19.jpg" alt="Siswa Al Furqan" loading="lazy">
+                    <img src="pria_misterius.jpeg" alt="Siswa Al Furqan" loading="lazy">
                 </div>
                 <div class="member-info">
                     <div class="member-name">
@@ -642,7 +640,7 @@
             <!-- Member 21 -->
             <div class="member-card">
                 <div class="member-image">
-                    <img src="member21.jpg" alt="Siswa Al Furqan" loading="lazy">
+                    <img src="pria_misterius.jpeg" alt="Siswa Al Furqan" loading="lazy">
                 </div>
                 <div class="member-info">
                     <div class="member-name">
@@ -656,7 +654,7 @@
             <!-- Member 22 -->
             <div class="member-card">
                 <div class="member-image">
-                    <img src="member22.jpg" alt="Siswa Al Furqan" loading="lazy">
+                    <img src="pria_misterius.jpeg" alt="Siswa Al Furqan" loading="lazy">
                 </div>
                 <div class="member-info">
                     <div class="member-name">
@@ -670,7 +668,7 @@
             <!-- Member 23 -->
             <div class="member-card">
                 <div class="member-image">
-                    <img src="member23.jpg" alt="Siswa Al Furqan" loading="lazy">
+                    <img src="pria_misterius.jpeg" alt="Siswa Al Furqan" loading="lazy">
                 </div>
                 <div class="member-info">
                     <div class="member-name">
@@ -817,10 +815,10 @@
                 <!-- Branch Right -->
                 <div class="org-card">
                     <div class="org-card-image">
-                        <img src="sekretaris.jpg" alt="Indy, Sekretaris Al Furqan" loading="lazy">
+                        <img src="pria_misterius.jpeg" alt="Nahda Rahmawati Putri, Sekretaris Al Furqan" loading="lazy">
                     </div>
                     <div class="org-card-info">
-                        <div class="org-card-name">Indy</div>
+                        <div class="org-card-name">Nahda Rahmawati Putri</div>
                         <div class="org-card-position">Sekretaris</div>
                     </div>
                 </div>
@@ -1056,6 +1054,54 @@
 
         // Start typing when page loads
         window.addEventListener('load', typeWriter);
+    </script>
+
+    <!-- Heart Like Button Logic -->
+    <script>
+        (function () {
+            // Load saved likes from localStorage
+            const saved = JSON.parse(localStorage.getItem('cardLikes') || '{}');
+
+            // Find all .stats divs and make them interactive
+            document.querySelectorAll('.stats').forEach((stat, i) => {
+                const key = 'card_' + i;
+                let liked = saved[key] ? true : false;
+                // Get initial count from the text node
+                let countNode = null;
+                stat.childNodes.forEach(n => {
+                    if (n.nodeType === Node.TEXT_NODE && n.textContent.trim()) countNode = n;
+                });
+                let count = parseInt((countNode ? countNode.textContent : '0').trim()) || 0;
+
+                // Apply saved state
+                if (liked) {
+                    stat.querySelector('svg').style.fill = '#e60023';
+                    if (countNode) countNode.textContent = ' ' + count;
+                }
+
+                // Style as clickable
+                stat.style.cursor = 'pointer';
+                stat.style.userSelect = 'none';
+                stat.setAttribute('title', 'Like');
+
+                stat.addEventListener('click', function () {
+                    liked = !liked;
+                    if (liked) {
+                        count++;
+                        stat.querySelector('svg').style.fill = '#e60023';
+                    } else {
+                        count = Math.max(0, count - 1);
+                        stat.querySelector('svg').style.fill = '';
+                    }
+                    if (countNode) countNode.textContent = ' ' + count;
+
+                    // Save to localStorage
+                    const data = JSON.parse(localStorage.getItem('cardLikes') || '{}');
+                    data[key] = liked ? count : 0;
+                    localStorage.setItem('cardLikes', JSON.stringify(data));
+                });
+            });
+        })();
     </script>
 
 </body>
